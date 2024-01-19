@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "useDefineForClassFields": true,
+    "lib": ["ESNext", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+
+    /* Bundler mode */
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    /* Linting */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+
+    /*Paths*/
+    "baseUrl": "./src",
+    "paths": {
+      "@BeastBook/layout/*": ["layout/*"],
+      "@BeastBook/components/*": ["components/*"],
+      "@BeastBook/assets/*": ["assets/*"]
+    }
+  },
+  "include": ["src", "type.ts"],
+  "references": [{ "path": "./tsconfig.node.json" }]
+}

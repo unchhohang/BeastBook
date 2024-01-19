@@ -1,0 +1,23 @@
+ 
+
+@font-face {
+    font-family: 'OoohBaby';
+    src: url('src/assets/fonts/OoohBaby-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'BeauRivageRegular';
+    src: url('src/assets/fonts/BeauRivage-Regular.ttf') format('truetype');
+}
+
+body{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'BeauRivageRegular', 'OoohBaby';
+    background: url('/src/assets/images/paper.png');
+
+}
+
+/* Hides scroll bar but is still scrollable */
+body::-webkit-scrollbar{
+    display: none;
+}
