@@ -9,8 +9,20 @@ import DescBeast from "@BeastBook/components/common/BeastDesc/DescBeast";
 import LayoutContainer from "@BeastBook/layout/LayoutContainer";
 import MidImgDesc from "@BeastBook/components/common/BeastDesc/MidImgDesc";
 import NextButton from "@BeastBook/components/common/Buttons/NextButton";
+import * as stylex from "@stylexjs/stylex";
+import { useNavigate } from "react-router-dom";
+
+const styles = stylex.create({
+  btn: {
+    display: "flex",
+    justifyContent: "end",
+    marginTop:'20px'
+  },
+});
 
 const BeastDescPage = () => {
+  const navigate = useNavigate();
+
   return (
     <LayoutContainer>
       {SCROLLBOOK.map((ele, i) => (
@@ -26,8 +38,8 @@ const BeastDescPage = () => {
         descPart1={lilthDesc.descPart1}
         descPart2={lilthDesc.descPart2}
       />
-      <div>
-        <NextButton />
+      <div {...stylex.props(styles.btn)}>
+        <NextButton action={()=> navigate('/charts')} />
       </div>
     </LayoutContainer>
   );
